@@ -3,14 +3,14 @@ os: linux
 
 hooks:
   BeforeInstall:
-    - location: ./before_install.sh
+    - location: ./simple-python-app/before_install.sh
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: ./stop_container.sh
+    - location: ./simple-python-app/stop_container.sh
       timeout: 300
       runas: root
   AfterInstall:
-    - location: ./start_container.sh
+    - location: ./simple-python-app/start_container.sh
       timeout: 300
       runas: root
